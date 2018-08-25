@@ -38,7 +38,11 @@ public class Main2Activity extends AppCompatActivity {
             SQLiteStatement statement=MapsActivity.database.compileStatement("DELETE FROM places WHERE name=?");
             statement.bindString(1,name);
             statement.execute();
-            Toast.makeText(this,"Please write a location name",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Please select again and write a location name",Toast.LENGTH_SHORT).show();
+            Intent intent=new Intent(getApplicationContext(),MapsActivity.class);
+            intent.putExtra("type","new");
+            startActivity(intent);
+
         }
 
     }
