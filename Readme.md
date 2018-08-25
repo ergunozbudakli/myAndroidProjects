@@ -1,6 +1,6 @@
 ﻿# Welcome to my AndroidProjects!
 
-Hi, I'm **Ergun** and I'm software engineer. This space is include in my first **android applications**. I try to improve my android skills. You can look my projects.
+Hey there! I'm **Ergun Ozbdakli** and I am a Software Engineer. Here you can see all of my **android applications**.
 
 - **TravelBook**
  Here you can see one of my android applications. This one is called TravelBook. TravelBook basically allows you to save adresses of the places that you want to save for later use. The application uses **google map** and it shows where you are when you first open the app. If you want to add a place to your list, you just have to click the location for a little while. After you click it for a couple of seconds, a screen will come out that will help you to write the name of the location that you are saving. If you want to delete a saved location, all you have to do is press for a while on the location that you saved with a name before and that's it. Application is also sensitive to not saving the same place twice and not saving them without a name. So, enjoy it!
