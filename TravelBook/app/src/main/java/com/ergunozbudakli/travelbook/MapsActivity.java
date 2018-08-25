@@ -171,6 +171,7 @@ else {
                     String cord1= String.valueOf(l1);
                     String cord2= String.valueOf(l2);
 
+
                     database= this.openOrCreateDatabase("Places",MODE_PRIVATE,null);
                     database.execSQL("CREATE TABLE IF NOT EXISTS places(name VARCHAR, latitude VARCHAR, longitude VARCHAR)");
                         mMap.addMarker(new MarkerOptions().title("Selected Location").position(latLng));

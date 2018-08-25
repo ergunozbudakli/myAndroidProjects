@@ -23,17 +23,21 @@ public class Main2Activity extends AppCompatActivity {
     public void save(View view){
         Intent intent1= getIntent();
         String name=intent1.getStringExtra("name");
+        String s=editText.getText().toString();
         MapsActivity.database= this.openOrCreateDatabase ("Places",MODE_PRIVATE,null);
         MapsActivity.database.execSQL("CREATE TABLE IF NOT EXISTS places (name VARCHAR, latitude VARCHAR, longitude VARCHAR)");
-        if(editText.getText().toString()!=null){
+        if(!s.equalsIgnoreCase("")){
         SQLiteStatement statement= MapsActivity.database.compileStatement("UPDATE places SET name=? WHERE name=?");
         statement.bindString(1,editText.getText().toString());
         statement.bindString(2,name);
         statement.execute();
-        MainActivity.names.add(name);
+
         Intent intent=new Intent(getApplicationContext(),MainActivity.class);
         startActivity(intent);}
         else{
+            SQLiteStatement statement=MapsActivity.database.compileStatement("DELETE FROM places WHERE name=?");
+            statement.bindString(1,name);
+            statement.execute();
             Toast.makeText(this,"Please write a location name",Toast.LENGTH_SHORT).show();
         }
 
