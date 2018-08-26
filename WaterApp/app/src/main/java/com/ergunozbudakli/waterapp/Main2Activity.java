@@ -51,7 +51,7 @@ ListView listView;
 
                 String data="DATE: "+cursor.getString(dateIx)+"    Quantity: "+cursor.getString(quantityIx)+"ml";
 
-                datalar.add(data);
+                datalar.add(0,data);
                 cursor.moveToNext();
             }
             arrayAdapter.notifyDataSetChanged();

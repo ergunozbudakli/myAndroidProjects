@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/parisienne"
         android:text="Hadi su içelim"
         android:textColor="@android:color/background_light"
@@ -28,11 +28,10 @@
         android:id="@+id/button"
         android:layout_width="79dp"
         android:layout_height="38dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="80dp"
         android:onClick="add"
         android:text="İç"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -49,29 +48,30 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintVertical_bias="0.649" />
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="86dp"
         android:layout_height="114dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="92dp"
         android:onClick="bardak"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498"
+        app:layout_constraintVertical_bias="0.497"
         app:srcCompat="@drawable/bardak" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="86dp"
         android:layout_height="114dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="72dp"
         android:onClick="sise"
         app:layout_constraintBottom_toBottomOf="@+id/imageView1"
         app:layout_constraintStart_toEndOf="@+id/imageView1"
         app:layout_constraintTop_toTopOf="@+id/imageView1"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/uludag" />
 
     <EditText
