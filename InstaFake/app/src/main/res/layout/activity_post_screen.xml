@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostScreen">
+
+    <ImageView
+        android:id="@+id/post_screen_imageView"
+        android:layout_width="266dp"
+        android:layout_height="251dp"
+        android:layout_marginTop="56dp"
+        android:onClick="click"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/click" />
+
+    <EditText
+        android:id="@+id/post_screen_comment_text"
+        android:layout_width="266dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Comment "
+        android:inputType="text|textMultiLine|textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_screen_imageView"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="84dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="post"
+        android:text="Post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/post_screen_comment_text"
+        app:layout_constraintTop_toBottomOf="@+id/post_screen_comment_text" />
+</android.support.constraint.ConstraintLayout>
