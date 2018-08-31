@@ -25,3 +25,7 @@ This one is called **CatchtoKenny**. CatchtoKenny is a very basic game in which 
 
 [You can watch the video of WaterApp](https://www.youtube.com/watch?v=C3W7KZWN9NM)
 
+- **InstaFake**
+![enter image description here](https://lh3.googleusercontent.com/esaP6LQ2WlZxmYJB7qapZj6PrfK0zXeWgymELKR1yOuKaXSdK3Ad5AmiuRxlcpyofLw4bS7YMfrO)![enter image description here](https://lh3.googleusercontent.com/Xzo44VdUr5JfI4GezMYtpxTykCCPi0rMP-p4Q6EgieRLth1ECbrr86-WXMxa8EQRu3SGRMU5DmPr)![enter image description here](https://lh3.googleusercontent.com/f-h7jhJp_pKZ-fYl7TJSi70bn556dhJxKpnX0eM_AmMlAmlW7fx-8V7JaKHB9E80BAqDcBVsL9lE)![enter image description here](https://lh3.googleusercontent.com/eipxIVkn46GWKbP42Js1ao2rHeUEsrAEuQ_TFwBAJZgsVHcsJxjKKn6gc1O_B5hLLYelofUGSTYE)
+[You can watch the video of InstaFake](https://www.youtube.com/watch?v=fJ1cKWBV6KE)
+

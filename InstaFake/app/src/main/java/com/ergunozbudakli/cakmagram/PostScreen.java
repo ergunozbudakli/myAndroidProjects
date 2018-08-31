@@ -24,6 +24,8 @@ import com.parse.SaveCallback;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class PostScreen extends AppCompatActivity {
     EditText editText;
@@ -76,6 +78,8 @@ public class PostScreen extends AppCompatActivity {
     }
 
     public void post(View view){
+        SimpleDateFormat spf= new SimpleDateFormat("yyyy-MM-dd- HH:mm");
+        String date= spf.format(new Date());
         ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
         selectedImage.compress(Bitmap.CompressFormat.PNG,50,byteArrayOutputStream);
         byte[] bytes= byteArrayOutputStream.toByteArray();
@@ -85,6 +89,7 @@ public class PostScreen extends AppCompatActivity {
         object.put("comment",editText.getText().toString());
         object.put("images",parseFile);
         object.put("username", ParseUser.getCurrentUser().getUsername());
+        object.put("createdate",date);
         object.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {

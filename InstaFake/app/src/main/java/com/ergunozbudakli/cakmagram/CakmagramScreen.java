@@ -8,8 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -30,6 +28,7 @@ public class CakmagramScreen extends AppCompatActivity {
     ArrayList<String> namesFromParse;
     ArrayList<String> commentFromParse;
     ArrayList<Bitmap> imagesFromParse;
+    ArrayList<String> datesFromParse;
     PostClass postClass;
 
     @Override
@@ -40,26 +39,12 @@ public class CakmagramScreen extends AppCompatActivity {
         namesFromParse=new ArrayList<>();
         commentFromParse=new ArrayList<>();
         imagesFromParse=new ArrayList<>();
-
-        postClass=new PostClass(namesFromParse,imagesFromParse,commentFromParse,this);
+        datesFromParse=new ArrayList<>();
+        postClass=new PostClass(namesFromParse,imagesFromParse,commentFromParse,datesFromParse,this);
         listView.setAdapter(postClass);
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                String comment=commentFromParse.get(position);
-                ParseObject object=new ParseObject("Comments");
-                try {
-                    object.delete();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                object.deleteInBackground();
-                return false;
-
-            }
-        });
         download();
+        postClass.notifyDataSetChanged();
     }
     public void download(){
         ParseQuery query= new ParseQuery("Comments");
@@ -78,15 +63,16 @@ public class CakmagramScreen extends AppCompatActivity {
                                 public void done(byte[] data, ParseException e) {
                                     if(e==null && data!=null){
                                         Bitmap bitmap= BitmapFactory.decodeByteArray(data,0,data.length);
-                                        imagesFromParse.add(bitmap);
-                                        namesFromParse.add(object.getString("username"));
-                                        commentFromParse.add(object.getString("comment"));
+                                        imagesFromParse.add(0,bitmap);
+                                        namesFromParse.add(0,object.getString("username"));
+                                        commentFromParse.add(0,object.getString("comment"));
+                                        datesFromParse.add(0,object.getString("createdate"));
                                         postClass.notifyDataSetChanged();
                                     }
                                 }
                             });
                         }
-                    }
+                        }
                 }
             }
 
