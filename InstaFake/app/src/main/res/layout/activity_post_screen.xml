@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/post_screen_imageView"
-        android:layout_width="266dp"
-        android:layout_height="251dp"
+        android:layout_width="261dp"
+        android:layout_height="283dp"
         android:layout_marginTop="56dp"
         android:onClick="click"
         app:layout_constraintEnd_toEndOf="parent"

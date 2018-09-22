@@ -81,7 +81,7 @@ public class PostScreen extends AppCompatActivity {
         SimpleDateFormat spf= new SimpleDateFormat("yyyy-MM-dd- HH:mm");
         String date= spf.format(new Date());
         ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
-        selectedImage.compress(Bitmap.CompressFormat.PNG,50,byteArrayOutputStream);
+        selectedImage.compress(Bitmap.CompressFormat.PNG,100,byteArrayOutputStream);
         byte[] bytes= byteArrayOutputStream.toByteArray();
         ParseFile parseFile=new ParseFile("image.png",bytes);
 
